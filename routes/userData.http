@@ -1,0 +1,36 @@
+
+###
+GET http://localhost:9000/api/user
+
+### 
+GET http://localhost:9000/api/user
+
+###
+POST http://localhost:9000/api/user
+Content-Type: application/json
+
+{
+      "firstName": "sparrow",
+      "lastName": "jack",
+      "password": "lol1",
+      "email": "jack@gmail.com",
+      "favProduct": [],
+      "mostVisitedProduct": []
+}
+
+###
+DELETE http://localhost:9000/api/user/72df1e94-8a2d-4cc6-84ca-da4897a52bc7
+
+###
+PUT http://localhost:9000/api/user
+Content-Type: application/json
+
+{
+    "id": "asjkdh",
+      "firstName": "sparrow",
+      "lastName": "jack",
+      "password": "lol1",
+      "email": "jack@gmail.com",
+      "favProduct": [],
+      "mostVisitedProduct": []
+}

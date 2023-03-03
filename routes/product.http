@@ -1,0 +1,41 @@
+###
+GET http://localhost:9000/api/products
+
+### 
+GET http://localhost:9000/api/products/5dedfd6f-e133-4666-94ae-7e16ad648d79
+
+###
+POST http://localhost:9000/api/products
+Content-Type: application/json
+
+{
+    "productName": "Zara T-shirt",
+    "categoryID": "1",
+    "price": "2500$",
+    "thumbImg": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.zara.net%2Fphotos%2F%2F%2F2022%2FI%2F0%2F2%2Fp%2F4374%2F311%2F800%2F2%2Fw%2F560%2F4374311800_1_1_1.jpg%3Fts%3D1662545832153&imgrefurl=https%3A%2F%2Fwww.zara.com%2Fus%2Fen%2Fprinted-knit-t-shirt-p04374311.html&tbnid=gb3jcdrP0opriM&vet=12ahUKEwjwtOLukIP9AhU5gVYBHUB2CcEQMygBegUIARDoAQ..i&docid=KW6gm1PRXxaEMM&w=563&h=845&q=zara%20t%20shirt&ved=2ahUKEwjwtOLukIP9AhU5gVYBHUB2CcEQMygBegUIARDoAQ",
+    "images" : ["https://static.zara.net/photos///2022/I/0/2/p/6224/302/912/2/w/36/6224302912_6_3_1.jpg?ts=1652867081428", "https://static.zara.net/photos///2022/I/0/2/p/6224/302/912/2/w/850/6224302912_6_2_1.jpg?ts=1652867074934", "https://static.zara.net/photos///2022/I/0/2/p/6224/302/912/2/w/850/6224302912_6_1_1.jpg?ts=1652867078288"],
+    "discountPercent" : "10%",
+    "quantity": 100,
+    "desc": "Round neck T-shirt with short sleeves. Contrasting front print.",
+    "createDate": "2023-02-07",
+    "createUser": "Dorjoo"
+}
+
+###
+DELETE http://localhost:9000/api/products/3fcad9d3-5372-49a7-aa77-f12163c4c52d
+
+###
+PUT http://localhost:9000/api/products/f5013397-96d5-40e6-8c0e-142cb4e0d315
+Content-Type: application/json
+    
+{
+    "productName": "BASIC PRINT T-SHIRT",
+    "categoryID": "t-shirt",
+    "price": "88$",
+    "thumbImg": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.zara.net%2Fphotos%2F%2F%2F2022%2FI%2F0%2F2%2Fp%2F4374%2F311%2F800%2F2%2Fw%2F560%2F4374311800_1_1_1.jpg%3Fts%3D1662545832153&imgrefurl=https%3A%2F%2Fwww.zara.com%2Fus%2Fen%2Fprinted-knit-t-shirt-p04374311.html&tbnid=gb3jcdrP0opriM&vet=12ahUKEwjwtOLukIP9AhU5gVYBHUB2CcEQMygBegUIARDoAQ..i&docid=KW6gm1PRXxaEMM&w=563&h=845&q=zara%20t%20shirt&ved=2ahUKEwjwtOLukIP9AhU5gVYBHUB2CcEQMygBegUIARDoAQ",
+    "images" : ["https://static.zara.net/photos///2022/I/0/2/p/6224/302/912/2/w/36/6224302912_6_3_1.jpg?ts=1652867081428", "https://static.zara.net/photos///2022/I/0/2/p/6224/302/912/2/w/850/6224302912_6_2_1.jpg?ts=1652867074934", "https://static.zara.net/photos///2022/I/0/2/p/6224/302/912/2/w/850/6224302912_6_1_1.jpg?ts=1652867078288"],
+    "discountPercent" : "20%",
+    "quantity": 100,
+    "desc": "Round neck T-shirt with short sleeves. Contrasting front print.",
+    "updateUser": "jack"
+}

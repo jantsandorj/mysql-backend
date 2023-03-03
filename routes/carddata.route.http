@@ -1,0 +1,30 @@
+
+###
+GET http://localhost:9000/api/carddata
+
+### 
+GET http://localhost:9000/api/carddata
+
+###
+POST http://localhost:9000/api/carddata
+Content-Type: application/json
+
+{
+    "iconName": "tag",
+    "title": "Affordable Price",
+    "paragraph": "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non. "
+}
+
+###
+DELETE http://localhost:9000/api/carddata/72df1e94-8a2d-4cc6-84ca-da4897a52bc7
+
+###
+PUT http://localhost:9000/api/carddata
+Content-Type: application/json
+
+ {
+    "id": "",
+    "iconName": "Settings",
+    "title": "/settings",
+    "paragraph": "6"
+}

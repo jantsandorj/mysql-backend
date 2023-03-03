@@ -1,0 +1,25 @@
+###
+GET http://localhost:9000/api/productCat
+
+### 
+GET http://localhost:9000/api/productCat/5dedfd6f-e133-4666-94ae-7e16ad648d79
+
+###
+POST http://localhost:9000/api/productCat
+Content-Type: application/json
+
+{
+    "category": "Shoes"
+}
+
+###
+DELETE http://localhost:9000/api/productCat/a3f03e36-140d-4ec4-8629-0f44c1222e04
+
+###
+PUT http://localhost:9000/api/productCat
+Content-Type: application/json
+
+{
+    "id": "df7053fa-47ab-41e1-b2f0-42f01698b85c",
+    "category": "Shoes"
+}

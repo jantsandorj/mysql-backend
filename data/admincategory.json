@@ -1,0 +1,44 @@
+[
+  {
+    "id": "9f16eca7-9d50-4e3f-9c03-86cbd3f1a70d",
+    "categoryName": "Dashboard",
+    "link": "/dashboard",
+    "position": "1",
+    "iconName": "speedometer"
+  },
+  {
+    "id": "2918b280-55dc-4e8d-8c3f-c418d14a3e3e",
+    "categoryName": "Orders",
+    "position": "2",
+    "link": "/orders",
+    "iconName": "list-ul"
+  },
+  {
+    "id": "635feb13-f123-4ada-a977-a785cc674174",
+    "categoryName": "Products",
+    "link": "/products",
+    "position": "3",
+    "iconName": "database-fill"
+  },
+  {
+    "id": "c7a16453-8db6-43b6-93e7-c20af6ad9cc8",
+    "categoryName": "Costumer",
+    "link": "/costumer",
+    "position": "4",
+    "iconName": "people-fill"
+  },
+  {
+    "id": "de291ebf-69e5-4562-ba25-1caf200aafc6",
+    "categoryName": "Category",
+    "link": "/message",
+    "position": "5",
+    "iconName": "chat-right-fill"
+  },
+  {
+    "id": "41f40127-5f64-4a16-87ac-7fb3685581e8",
+    "categoryName": "Settings",
+    "link": "/settings",
+    "position": "6",
+    "iconName": "person-fill-gear"
+  }
+]

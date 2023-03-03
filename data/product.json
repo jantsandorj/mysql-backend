@@ -1,0 +1,111 @@
+[
+  {
+    "id": "010b268f-cfb9-4df5-a8d6-c27e1f31d00d",
+    "productName": "FLOWING SATIN SHIRT",
+    "categoryID": "T-Shirt",
+    "price": "100",
+    "thumbImg": "https://res.cloudinary.com/duo1znrio/image/upload/v1676519287/oexxvvkju8ngov0vovvl.jpg",
+    "images": [
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676207925/o3axxc5q7har7orffqbi.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676207926/xiazd3vhh2jtrghptchj.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676207926/b2c7gggj1dh4uwmf5z2x.jpg"
+    ],
+    "discountPercent": "20",
+    "quantity": "100",
+    "desc": "Collared V-neck shirt with long sleeves and a button-up front.",
+    "createUser": "ysuu",
+    "createDate": 1676207930926,
+    "updateDate": 1676519299774,
+    "updateUser": ""
+  },
+  {
+    "id": "6e4b2c14-f959-4f03-9d01-f507ba8199c5",
+    "productName": "haha1",
+    "categoryID": "Bloomers",
+    "price": "1500",
+    "thumbImg": "https://res.cloudinary.com/duo1znrio/image/upload/v1676208062/ilaeyimp8lctqcni0trv.jpg",
+    "images": [
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208070/d2asspcvw6rapy3s65bj.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208070/jmojamkpsvcevo5rgnzi.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208070/lwnftjlxvui3xryjrr8w.jpg"
+    ],
+    "discountPercent": "30",
+    "quantity": "150",
+    "desc": "sdfghjkl",
+    "createUser": "jack",
+    "createDate": 1676208075911,
+    "updateDate": 1676210966806
+  },
+  {
+    "id": "62858ab1-5b8a-43aa-b4c3-dfae64ddff92",
+    "productName": "haha2",
+    "categoryID": "Bloomers",
+    "price": "149",
+    "thumbImg": "https://res.cloudinary.com/duo1znrio/image/upload/v1676208190/khe6aphw07vdzymm1ndv.jpg",
+    "images": [
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208193/oigy8fuzlm7yzcfmcjmd.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208194/s9hpo5jsrql06vkvnbac.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208195/kb014vjey5acz5jmygxx.jpg"
+    ],
+    "discountPercent": "10",
+    "quantity": "170",
+    "desc": "qwe",
+    "createUser": "ysuu",
+    "createDate": 1676208200541,
+    "updateDate": 1676211146228,
+    "updateUser": ""
+  },
+  {
+    "id": "9142182a-6fe7-4e08-be0d-30684e6ad9eb",
+    "productName": "pro3",
+    "categoryID": "Bodysuit",
+    "price": "140",
+    "thumbImg": "https://res.cloudinary.com/duo1znrio/image/upload/v1676208364/fwsrupygaw0k00g5lf2x.jpg",
+    "images": [
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208368/bqflzrujvnccvftophbr.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208369/qp69ukvyoy6zxb8xhsft.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208369/tmouoali78n47zfzlwdb.jpg"
+    ],
+    "discountPercent": "5",
+    "quantity": "130",
+    "desc": "asdfghjkl",
+    "createUser": "dorjoo",
+    "createDate": 1676208373638
+  },
+  {
+    "id": "49d0f0db-5866-4a29-8b9b-83c9be990b29",
+    "productName": "pro4",
+    "categoryID": "Bloomers",
+    "price": "156",
+    "thumbImg": "https://res.cloudinary.com/duo1znrio/image/upload/v1676208430/kq5csd1fa0r1vgctqovy.jpg",
+    "images": [
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208436/p21m3vuc4v2wzfmofe0n.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208436/zyrrqazdtjvnwfypaxhl.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676208436/upckinrlw27elojtalrr.jpg"
+    ],
+    "discountPercent": "10",
+    "quantity": "800",
+    "desc": "zxcvbnm,.",
+    "createUser": "jack",
+    "createDate": 1676208441686,
+    "updateDate": 1676210562550
+  },
+  {
+    "id": "ceb492d0-c378-45ee-9e9a-f5f5118a28af",
+    "productName": "pro5",
+    "categoryID": "Bloomers",
+    "price": "12",
+    "thumbImg": "https://res.cloudinary.com/duo1znrio/image/upload/v1676210436/hsztp4czntzhysk8wakd.jpg",
+    "images": [
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676210437/icnbvd8rvm5akwtlmrox.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676210438/d2gutggzurugpe6ututi.jpg",
+      "https://res.cloudinary.com/duo1znrio/image/upload/v1676210438/bajqr1hwnyh60lhojrin.jpg"
+    ],
+    "discountPercent": "1",
+    "quantity": "123",
+    "desc": "qweqwer",
+    "createUser": "dorj",
+    "createDate": 1676210443499,
+    "updateDate": 1676210490308
+  }
+]
