@@ -1,150 +1,80 @@
-const fs = require("fs");
 const uuid = require("uuid");
-const dataFile = process.cwd() + "/data/user.json";
 const bcrypt = require("bcrypt");
 const { response } = require("express");
 const saltRounds = 10;
+const userService = require("../model/user-service");
 
-exports.getAll = (req, res) => {
-  fs.readFile(dataFile, "utf-8", (readErr, data) => {
-    if (readErr) {
-      return res.json({ status: false, result: readErr });
+exports.getAll = async (req, res) => {
+  const { limit } = req.query;
+  try {
+    const result = await userService.getUsers(limit);
+    if (result.length > 0) {
+      res.json({ status: true, result });
     }
-    const savedData = JSON.parse(data);
-    return res.json({ status: true, result: savedData });
-  });
-};
-
-exports.create = (req, res) => {
-  const {
-    firstName,
-    lastName,
-    password,
-    email,
-    favProduct,
-    mostVisitedProduct,
-  } = req.body;
-  fs.readFile(dataFile, "utf-8", async (readErr, data) => {
-    if (readErr) {
-      return res.json({ status: false, result: readErr });
-    }
-    const encryptPassword = await bcrypt.hash(password, saltRounds);
-    const parsedData = JSON.parse(data);
-    const newObj = {
-      id: uuid.v4(),
-      firstName,
-      lastName,
-      password: encryptPassword,
-      email,
-      favProduct,
-      mostVisitedProduct,
-      createDate: Date.now(),
-    };
-    parsedData.push(newObj);
-    fs.writeFile(dataFile, JSON.stringify(parsedData), (writeErr) => {
-      if (writeErr) {
-        return res.json({ status: false, result: writeErr });
-      }
-      return res.json({ status: true, result: parsedData });
-    });
-  });
-};
-
-exports.update = (req, res) => {
-  const { id } = req.params;
-  console.log(id);
-  const {
-    firstName,
-    lastName,
-    password,
-    email,
-    favProduct,
-    mostVisitedProduct,
-    updateUser,
-  } = req.body;
-  fs.readFile(dataFile, "utf-8", (readErr, data) => {
-    if (readErr) {
-      return res.json({ status: false, result: readErr });
-    }
-    const parsedData = JSON.parse(data);
-    const updateData = parsedData.map((e) => {
-      if (e.id == id) {
-        return {
-          ...e,
-          firstName,
-          lastName,
-          password,
-          email,
-          favProduct,
-          mostVisitedProduct,
-          updateUser,
-          updateDate: Date.now(),
-          updateUser,
-        };
-      } else {
-        return e;
-      }
-    });
-    fs.writeFile(dataFile, JSON.stringify(updateData), (writeErr) => {
-      if (writeErr) {
-        return res.json({ status: false, result: writeErr });
-      }
-      return res.json({ status: true, result: updateData });
-    });
-  });
-};
-
-exports.delete = (req, res) => {
-  const { id } = req.params;
-  console.log(id);
-  fs.readFile(dataFile, "utf-8", (readErr, data) => {
-    if (readErr) {
-      return res.json({ status: false, result: readErr });
-    }
-    const parsedData = JSON.parse(data);
-    const deleteData = parsedData.filter((e) => e.id != id);
-    fs.writeFile(dataFile, JSON.stringify(deleteData), (writeErr) => {
-      if (writeErr) {
-        return res.json({ status: false, result: writeErr });
-      }
-      return res.json({ status: true, result: deleteData });
-    });
-  });
-};
-exports.login = (req, res) => {
-  const { username, password } = req.body;
-  console.log(id);
-  if (!username || !password) {
-    return res.json({ status: false, message: "ner pass aldaatai" });
+  } catch (err) {
+    console.log(err);
+    res.json({ status: false, message: err });
   }
-  fs.readFile(dataFile, "utf-8", (readErr, data) => {
-    if (readErr) {
-      return res.json({ status: false, result: readErr });
+};
+exports.getOne = async (res, req) => {
+  const { id } = req.params;
+  if (!id) {
+    return res.json({ status: false, message: "user id not found" });
+  }
+  try {
+    const result = await userService.getUser(id);
+    res.json({ status: true, result });
+  } catch (err) {
+    res.json({ status: false, message: err });
+  }
+};
+
+exports.create = async (res, req) => {
+  const { first_name, last_name, password, email, birth_date } = req.body;
+  const newobj = {
+    first_name,
+    last_name,
+    password,
+    email,
+    birth_date,
+  };
+  try {
+    const result = await userService.createUser(newobj);
+    console.log(result);
+    res.json({ status: true, result });
+  } catch (err) {
+    res.json({ status: false, message: err });
+  }
+};
+exports.update = async (req, res) => {
+  const { id } = req.params;
+  if (!id) {
+    return res.json({ status: false, message: "err" });
+  }
+  try {
+    const result = await userService.updateUser(id, req.body);
+    console.log(result);
+
+    if (result && result[0].affectedRows > 0) {
+      res.json({ status: true, result });
     }
-    const parsedData = JSON.parse(data);
-    const user = parsedData.map(async (e) => {
-      if (email == e.email) {
-        const decrypt = await bcrypt.compare(password, e.password);
-        if (decrypt) {
-          return {
-            username: e.username,
-            id: e.id,
-            lastName: e.lastName,
-            firstName: e.firstName,
-          };
-        }
-      }
-    });
-    if (user.lenght > 0) {
-      return res.json({
-        status: true,
-        result: user,
-      });
-    } else {
-      return response.json({
-        status: false,
-        message: "tanii email esvel password buruu bn",
-      });
+  } catch (err) {
+    res.json({ status: false, message: err });
+  }
+};
+
+exports.delete = async (req, res) => {
+  const { id } = req.params;
+  if (!id) {
+    return res.json({ status: false, message: "err" });
+  }
+  try {
+    const result = await userService.deleteUser(id);
+    console.log(result);
+    if (result && result.affectedRows > 0) {
+      res.json({ status: true, result });
     }
-  });
+  } catch (err) {
+    res.json({ status: false, message: err });
+  }
 };
